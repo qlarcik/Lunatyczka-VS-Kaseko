@@ -7,61 +7,78 @@
 
 <style>
 body{
-background:#111;
+background:linear-gradient(135deg,#0f0f1f,#1d1035);
 color:white;
-font-family:Arial,sans-serif;
-text-align:center;
+font-family:Arial;
 margin:0;
-padding:20px;
+text-align:center;
 }
 
 .container{
-max-width:1000px;
+max-width:1200px;
 margin:auto;
-background:#1b1b1b;
-padding:25px;
-border-radius:20px;
+padding:20px;
 }
 
 h1{
-font-size:50px;
+font-size:60px;
+color:gold;
 }
 
-.scoreboard{
+.players{
 display:flex;
 justify-content:space-between;
-font-size:30px;
+font-size:35px;
 margin-bottom:20px;
 }
 
-.red{
-color:#ff4d4d;
-}
-
-.blue{
-color:#4da6ff;
-}
+.red{color:#ff4d4d;}
+.blue{color:#4da6ff;}
 
 #category{
-font-size:28px;
-margin:20px 0;
+font-size:30px;
+color:#ffd700;
+margin:20px;
 }
 
 #timer{
-font-size:35px;
-color:#ffd700;
+font-size:50px;
+color:#ffcc00;
+}
+
+#question{
+font-size:32px;
+margin:30px;
+}
+
+.answers{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
 button{
-width:100%;
-padding:18px;
-margin-top:10px;
+font-size:24px;
+padding:20px;
 border:none;
-border-radius:12px;
-font-size:22px;
-background:#3b82f6;
+border-radius:20px;
 color:white;
 cursor:pointer;
+}
+
+.a{background:#2b7cff;}
+.b{background:#00b894;}
+.c{background:#f1c40f;}
+.d{background:#e74c3c;}
+
+button:hover{
+transform:scale(1.03);
+}
+
+#winner{
+font-size:50px;
+margin-top:30px;
+color:gold;
 }
 </style>
 </head>
@@ -72,23 +89,24 @@ cursor:pointer;
 
 <h1>🏆 O SUBY!</h1>
 
-<div class="scoreboard">
-<div class="red">🔴 Lunatyczka<br>0 pkt</div>
-<div class="blue">🔵 Kaseko<br>0 pkt</div>
+<div class="players">
+<div class="red">🔴 Lunatyczka<br><span id="p1">0</span> pkt</div>
+<div class="blue">🔵 Kaseko<br><span id="p2">0</span> pkt</div>
 </div>
 
 <div id="category">🎡 Kategoria</div>
+<div id="timer">45</div>
 
-<div id="timer">
-45
+<div id="question">Tutaj pojawi się pytanie</div>
+
+<div class="answers">
+<button class="a">Odpowiedź A</button>
+<button class="b">Odpowiedź B</button>
+<button class="c">Odpowiedź C</button>
+<button class="d">Odpowiedź D</button>
 </div>
 
-<h2>Tutaj pojawi się pytanie</h2>
-
-<button>Odpowiedź A</button>
-<button>Odpowiedź B</button>
-<button>Odpowiedź C</button>
-<button>Odpowiedź D</button>
+<div id="winner"></div>
 
 </div>
 
