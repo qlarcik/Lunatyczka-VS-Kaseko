@@ -7,83 +7,23 @@
 <style>
 body{
     margin:0;
-    overflow:hidden;
-    font-family:Arial,sans-serif;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-#tlo{
-    position:fixed;
-    top:0;
-    left:0;
+img{
     width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-#pytanie{
-    position:absolute;
-    top:42%;
-    left:50%;
-    transform:translateX(-50%);
-    color:white;
-    font-size:38px;
-    text-align:center;
-    width:700px;
-}
-
-.odpowiedz{
-    position:absolute;
-    width:320px;
-    height:80px;
-    border:none;
-    border-radius:20px;
-    color:white;
-    font-size:30px;
-    font-weight:bold;
-}
-
-#a{background:#00a2ff; top:60%; left:18%;}
-#b{background:#00d27f; top:60%; right:18%;}
-#c{background:#ffb300; top:75%; left:18%;}
-#d{background:#ff3030; top:75%; right:18%;}
-
-#timer{
-    position:absolute;
-    top:33%;
-    left:50%;
-    transform:translateX(-50%);
-    color:yellow;
-    font-size:60px;
-    font-weight:bold;
+    max-width:1600px;
 }
 </style>
 </head>
 
 <body>
 
-<img id="tlo" src="tlo.png">
-
-<div id="timer">45</div>
-
-<div id="pytanie">
-Jakie jest najwyższe pasmo górskie na świecie?
-</div>
-
-<button class="odpowiedz" id="a">
-A: Himalaje
-</button>
-
-<button class="odpowiedz" id="b">
-B: Andy
-</button>
-
-<button class="odpowiedz" id="c">
-C: Alpy
-</button>
-
-<button class="odpowiedz" id="d">
-D: Kaukaz
-</button>
+<img src="tlo.png">
 
 </body>
 </html>
