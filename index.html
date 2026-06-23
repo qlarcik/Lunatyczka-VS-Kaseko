@@ -2,120 +2,28 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gra o Suby</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#0b0b2d,#1b0050);
-    color:white;
-    text-align:center;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-h1{
-    color:#ffd700;
-    font-size:60px;
-    margin-top:20px;
+img{
+    width:100%;
+    max-width:1600px;
 }
-
-.score{
-    position:absolute;
-    top:50px;
-    font-size:40px;
-}
-
-.left{
-    left:50px;
-    color:#ff4b4b;
-}
-
-.right{
-    right:50px;
-    color:#3fa9ff;
-}
-
-.center{
-    margin-top:100px;
-}
-
-.reward{
-    width:350px;
-    border-radius:20px;
-    box-shadow:0 0 30px purple;
-}
-
-.category{
-    font-size:40px;
-    color:#ffd700;
-    margin-top:20px;
-}
-
-.timer{
-    font-size:50px;
-    color:#ffd700;
-}
-
-.question{
-    font-size:45px;
-    margin-top:30px;
-}
-
-.answers{
-    width:80%;
-    margin:auto;
-    margin-top:40px;
-}
-
-button{
-    width:45%;
-    margin:15px;
-    padding:25px;
-    border:none;
-    border-radius:20px;
-    font-size:30px;
-    color:white;
-}
-
-.a{background:#0099ff;}
-.b{background:#00cc99;}
-.c{background:#ffd700;color:black;}
-.d{background:#ff3333;}
 </style>
 </head>
 
 <body>
 
-<div class="score left">
-🔴 Lunatyczka<br>0 pkt
-</div>
-
-<div class="score right">
-🔵 Kaseko<br>0 pkt
-</div>
-
-<h1>Gra o Suby</h1>
-
-<div class="center">
-<img class="reward" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Trophy_icon.svg/512px-Trophy_icon.svg.png">
-
-<div class="category">🌀 Kategoria</div>
-<div class="timer">45</div>
-
-<div class="question">
-Tutaj pojawi się pytanie
-</div>
-
-<div class="answers">
-<button class="a">Odpowiedź A</button>
-<button class="b">Odpowiedź B</button>
-<br>
-<button class="c">Odpowiedź C</button>
-<button class="d">Odpowiedź D</button>
-</div>
-
-</div>
+<img src="tlo.png">
 
 </body>
 </html>
