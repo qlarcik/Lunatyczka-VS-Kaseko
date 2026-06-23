@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 <meta charset="UTF-8">
 <title>Gra o Suby!</title>
 
 <style>
+
 body{
     margin:0;
-    background:#000;
+    background:black;
     color:white;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-}
-
-#startScreen{
     text-align:center;
 }
 
-h1{
-    font-size:70px;
-    color:gold;
-}
-
-h2{
-    font-size:40px;
-}
-
 button{
-    font-size:40px;
+    font-size:35px;
     padding:20px 50px;
     border:none;
     border-radius:20px;
-    cursor:pointer;
     background:lime;
+    cursor:pointer;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <div id="startScreen">
-    <h1>🏆 GRA O SUBY!</h1>
 
-    <h2>❤️ Lunatyczka VS 💙 Kaseko</h2>
+<h1>🏆 GRA O SUBY!</h1>
 
-    <h2>🎁 Nagroda: 100 Giftów</h2>
+<h2>❤️ Lunatyczka VS 💙 Kaseko</h2>
 
-    <button onclick="startGame()">START</button>
+<h2>🎁 Nagroda: 100 Giftów</h2>
+
+<button onclick="startGame()">START</button>
+
 </div>
 
 <script>
+
 function startGame(){
 
 document.body.innerHTML = 
@@ -79,7 +74,9 @@ document.body.innerHTML =
 ;
 
 }
+
 </script>
 
 </body>
+
 </html>
