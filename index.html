@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
 <meta charset="UTF-8">
 <title>Gra o Suby!</title>
@@ -9,19 +8,65 @@
 
 body{
     margin:0;
+    font-family:Arial, sans-serif;
     background:black;
     color:white;
-    font-family:Arial;
-    text-align:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
-button{
+#startScreen{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#gameScreen{
+    display:none;
+    min-height:100vh;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    color:gold;
+}
+
+.players{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:28px;
+}
+
+.info{
+    margin-top:30px;
+    font-size:25px;
+}
+
+#question{
+    margin-top:50px;
     font-size:35px;
-    padding:20px 50px;
+}
+
+.answers{
+    margin-top:40px;
+}
+
+.answers button{
+    width:220px;
+    height:80px;
+    margin:10px;
+    font-size:30px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.startButton{
+    font-size:40px;
+    padding:20px 60px;
     border:none;
     border-radius:20px;
     background:lime;
@@ -41,34 +86,52 @@ button{
 
 <h2>🎁 Nagroda: 100 Giftów</h2>
 
-<button onclick="startGame()">START</button>
+<button class="startButton" onclick="startGame()">START</button>
+
+</div>
+
+<div id="gameScreen">
+
+<h1>🏆 GRA O SUBY!</h1>
+
+<div class="players">
+<div>❤️ Lunatyczka: 0 pkt</div>
+<div>💙 Kaseko: 0 pkt</div>
+</div>
+
+<div class="info">
+🔄 Runda 1 / 40
+<br><br>
+🌍 Kategoria: Geografia
+<br><br>
+⏱️ 45 sekund
+</div>
+
+<div id="question">
+❓ Tutaj pojawi się pytanie
+</div>
+
+<div class="answers">
+
+<button>A</button>
+<button>B</button>
+
+<br>
+
+<button>C</button>
+<button>D</button>
+
+</div>
 
 </div>
 
 <script>
 
-function startGame() {
+function startGame(){
 
-document.body.innerHTML =  `
-<h1>🏆 GRA O SUBY!</h1>
+document.getElementById("startScreen").style.display = "none";
 
-<h2>❤️ Lunatyczka: 0 pkt</h2>
-
-<h2>💙 Kaseko: 0 pkt</h2>
-
-<h2>🔄 Runda 1 / 40</h2>
-
-<h2>🌍 Kategoria: Geografia</h2>
-
-<h2>⏱️ 45 sekund</h2>
-
-<h1>❓ Tutaj pojawi się pytanie</h1>
-
-<button>A</button>
-<button>B</button>
-<button>C</button>
-<button>D</button>
-`;
+document.getElementById("gameScreen").style.display = "block";
 
 }
 
