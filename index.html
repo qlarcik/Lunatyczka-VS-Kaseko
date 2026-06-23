@@ -2,28 +2,61 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Gra o Suby</title>
+<title>Gra o Suby!</title>
 
 <style>
 body{
     margin:0;
     background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
 }
 
-img{
-    width:100%;
-    max-width:1600px;
+#startScreen{
+    text-align:center;
+}
+
+h1{
+    font-size:70px;
+    color:gold;
+}
+
+h2{
+    font-size:40px;
+}
+
+button{
+    font-size:40px;
+    padding:20px 50px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:lime;
 }
 </style>
 </head>
 
 <body>
 
-<img src="tlo.png">
+<div id="startScreen">
+    <h1>🏆 GRA O SUBY!</h1>
+
+    <h2>❤️ Lunatyczka VS 💙 Kaseko</h2>
+
+    <h2>🎁 Nagroda: 100 Giftów</h2>
+
+    <button onclick="startGame()">START</button>
+</div>
+
+<script>
+function startGame(){
+    alert("Gra rozpocznie się!");
+}
+</script>
 
 </body>
 </html>
