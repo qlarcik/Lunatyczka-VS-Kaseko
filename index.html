@@ -98,8 +98,8 @@ h1{
 <h1>🏆 GRA O SUBY!</h1>
 
 <div class="players">
-<div>❤️ Lunatyczka: 0 pkt</div>
-<div>💙 Kaseko: 0 pkt</div>
+<div id="player1"> Lunatyczka: 0 pkt</div>
+<div id="player2"> Kaseko: 0 pkt</div>
 </div>
 
 <div class="info">
@@ -117,7 +117,7 @@ h1{
 <div class="answers">
 
 <button>A) Madryt</button>
-<button>B) Rzym</button>
+<button onclick="goodAnswer()">B) Rzym</button>
 
 <br>
 
@@ -130,6 +130,17 @@ h1{
 
 <script>
 
+let points1 = 0;
+
+function goodAnswer(){
+
+points1++;
+
+document.getElementById("player1").innerHTML =
+" Lunatyczka: " + points1 + " pkt";
+
+}
+    
 function startGame(){
 
 document.getElementById("startScreen").style.display = "none";
