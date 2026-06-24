@@ -117,7 +117,7 @@ h1{
 <div class="answers">
 
 <button>A) Madryt</button>
-<button onclick="goodAnswer()">B) Rzym</button>
+<button id="answerB" onclick="goodAnswer()">B) Rzym</button>
 
 <br>
 
@@ -139,9 +139,8 @@ points1++;
 document.getElementById("player1").innerHTML =
 "❤️ Lunatyczka: " + points1 + " pkt";
 
-
 document.getElementById("answerB").disabled = true;
-
+ 
 }   
 function startGame(){
 
